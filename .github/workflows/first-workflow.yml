@@ -11,12 +11,18 @@ jobs:
     - name: checkout repository
       uses: actions/checkout@v4
 
-    - name: Welcome message
-      run: echo "my first Workflow"
-
-    - name: Fetching files name from the repository
-      run: ls
+    - name: Display message, list directory and read file
+      run: |
+        echo "my first Workflow"
+        ls
+        cat README.md
     
-    - name: Read files
-      run: cat README.md
+    - name: Generate third party library
+      run: cowsay -f dragon "Run for cover" >> dragon.txt
+
+  #  - name: Fetching files name from the repository
+  #    run: ls
+    
+  #  - name: Read files
+  #    run: cat README.md
 
