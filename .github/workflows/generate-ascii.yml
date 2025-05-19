@@ -12,10 +12,10 @@ jobs:
     - name: Executing Shell script
       run: |
         chmod +x ./ascii-script.sh
-        ./ascii-script.sh¨
+        ./ascii-script.sh
 
   hello_world_job:
-    #needs: ascii_job
+    needs: ascii_job
     runs-on: ubuntu-latest
 
     steps:
