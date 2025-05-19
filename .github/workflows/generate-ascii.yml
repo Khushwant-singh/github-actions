@@ -12,7 +12,23 @@ jobs:
     - name: Executing Shell script
       run: |
         chmod +x ./ascii-script.sh
-        ./ascii-script.sh
+        ./ascii-script.sh¨
+
+    hello_world_job:
+      needs: ascii_job
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: hello job first steps
+        uses: actions/checkout@v4
+
+      - name: Display message
+        run: |
+          echo "hello world"
+          ls
+          cat README.md
+
+
 #    - name: Install Cowsay Program
 #      run: sudo apt-get install cowsay -y
 
