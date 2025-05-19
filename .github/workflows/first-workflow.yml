@@ -17,8 +17,8 @@ jobs:
         ls
         cat README.md
     
-    - name: Generate third party library
-      run: cowsay -f dragon "Run for cover" >> dragon.txt
+  #  - name: Generate third party library
+  #    run: cowsay -f dragon "Run for cover" >> dragon.txt
 
   #  - name: Fetching files name from the repository
   #    run: ls
