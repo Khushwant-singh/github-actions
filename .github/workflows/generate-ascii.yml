@@ -28,8 +28,12 @@ jobs:
     - name: Download dragon file
       uses: actions/download-artifact@v3
       with: dragon-text-file
-
+    
+    - name: Test File Exists
+      run: grep -i "dragon" dragon.txt
   
+    - name: Read file
+      run: cat dragon.txt
 #    - name: Install Cowsay Program
 #      run: sudo apt-get install cowsay -y
 
