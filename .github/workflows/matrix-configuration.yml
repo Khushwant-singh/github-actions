@@ -11,7 +11,7 @@ jobs:
                 images: [hello-world, alpine] 
                 exclude:
                     - images: alpine
-                      os: windows-latest
+                      runs-on: windows-latest
         runs-on: ${{ matrix.runs-on }}
         steps:
         -   name: Echo Docker details
