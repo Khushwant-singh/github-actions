@@ -8,12 +8,15 @@ jobs:
         strategy:
             matrix:
                 runs-on: [ubuntu-latest, windows-latest]
-                imags: [hello-world, alpine] 
+                images: [hello-world, alpine] 
+                exclude:
+                    - images: alpine
+                      os: windows-latest
         runs-on: ${{ matrix.runs-on }}
         steps:
         -   name: Echo Docker details
             run: docker info
             
         -   name: Run Images
-            run: docker run ${{ matrix.imags }}
+            run: docker run ${{ matrix.images }}
  
